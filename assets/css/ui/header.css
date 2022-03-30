@@ -1,0 +1,19 @@
+header {
+    padding: 1rem;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    z-index: 999999;
+
+    background-color: var(--bg-header);
+    color: var(--fg-header);
+}
+
+header svg {
+    height: 100%;
+    float: right;
+    margin-left: 1rem;
+}

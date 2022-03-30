@@ -1,0 +1,100 @@
+@import url(/assets/css/ui/ui.css);
+
+.cards {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    gap: 0.5rem;
+}
+.cards li {
+    border-radius: 0.5rem;
+    padding: .5rem;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+    
+    background-color: var(--bg-widget);
+    color: var(--fg-widget);
+}
+.cards li:active {
+    transform: scale(0.9);
+}
+.cards li .wrapper {
+    width: 100%;
+    aspect-ratio: 1/1;
+    text-align: center;
+    position: relative;
+    margin-bottom: .5rem;
+}
+.cards li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 100%;
+    border-radius: .5rem;
+}
+.cards li .fg {
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.cards li .bg {
+    width: 100%;
+    filter: blur(.5rem);
+}
+
+.empty {
+    display: none;
+}
+.cards:empty + .empty {
+    display: block;
+}
+
+.cards li span {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-header);
+    z-index: 99999;
+    transition: opacity 200ms ease-in-out;
+}
+
+.loading svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    transform: translate(-50%,-50%);
+    fill: var(--fg-header);
+    transform-origin: 0% 0%;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg) translate(-50%,-50%)
+    }
+    40% {
+        transform: rotate(240deg) translate(-50%,-50%)
+    }
+    50% {
+        transform: rotate(180deg) translate(-50%,-50%)
+    }
+    90% {
+        transform: rotate(400deg) translate(-50%,-50%)
+    }
+    100% {
+        transform: rotate(360deg) translate(-50%,-50%)
+    }
+}

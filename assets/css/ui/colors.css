@@ -1,0 +1,23 @@
+:root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --bg-widget: #d3d3d3;
+    --fg-widget: #000000;
+    --bg-header: #50f79b;
+    --fg-header: #000000;
+    --bg-accent: #42e48b;
+    --fg-accent: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000000;
+        --fg: #ffffff;
+        --bg-widget: #383838;
+        --fg-widget: #ffffff;
+        --bg-header: #1a1a1a;
+        --fg-header: #ffffff;
+        --bg-accent: #474747;
+        --fg-accent: #ffffff;
+    }
+}
