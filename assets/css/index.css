@@ -3,9 +3,16 @@
 .cards {
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(6rem, .5fr));
     gap: 0.5rem;
 }
+
+@media only screen and (min-width: 30rem) {
+    .cards {
+        grid-template-columns: repeat(auto-fit, 6rem);
+    }
+}
+
 .cards li {
     border-radius: 0.5rem;
     padding: .5rem;
