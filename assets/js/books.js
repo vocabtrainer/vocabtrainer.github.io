@@ -29,6 +29,7 @@ var books = {
             cache.match("list.json").then(async res => {
                 if (!res) {
                     document.querySelectorAll(".loading")[0].style.opacity = "0%"
+                    document.querySelectorAll(".empty")[0].style.display = "block"
                     setTimeout(() => {
                         document.querySelectorAll(".loading")[0].style.display = "none"
                     }, 200)

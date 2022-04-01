@@ -54,5 +54,4 @@ function CSVToArray( strData, strDelimiter ){
     return( arrData );
 }
 
-
 books.fetch()
