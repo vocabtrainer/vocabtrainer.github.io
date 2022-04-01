@@ -1,0 +1,6 @@
+{
+    "name": "VocabTrainer",
+    "short_name": "VoTr",
+    "start_url": "/",
+    "display": "standalone"
+}
