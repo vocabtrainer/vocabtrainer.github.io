@@ -35,24 +35,6 @@ self.addEventListener("activate", event => {
 });
 
 
-// self.addEventListener("fetch", e => {
-//    e.respondWith(
-//       caches.match(e.request).then(res => {
-//          const nres = fetch(e.request).then(response => {
-//             caches.open("pwa-assets").then(cache => {
-//                cache.put(e.request, response.clone())
-//             })
-//             return res || nres
-//          })
-//       })
-//    )
-// })
-
-// self.addEventListener("fetch", e => {
-//    e.respondWith(
-//       fetch(e.request)
-//    )
-// })
 
 self.addEventListener("fetch", event => {
    event.respondWith(
