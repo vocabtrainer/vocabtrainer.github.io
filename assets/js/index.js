@@ -54,4 +54,8 @@ function CSVToArray( strData, strDelimiter ){
     return( arrData );
 }
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register("/sw.js");
+ }
+
 books.fetch()
